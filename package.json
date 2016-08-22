@@ -2,11 +2,11 @@
   "name": "pagefbi2",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "6.4.0"
+  },
   "scripts": {
     "start": "node app.js"
-    "engines": {
-      "node": "6.4.0"
-    }
   },
   "dependencies": {
     "express": "^4.13.3",

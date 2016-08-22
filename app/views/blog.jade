@@ -1,0 +1,200 @@
+extends layout
+
+block content
+  <!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!--><html class="not-ie no-js" lang="en"><!--<![endif]-->
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title Blog
+    <!-- <meta name="robots" content="index,follow"> -->
+    meta(name="description" content="Eprom Blog")
+    meta(name="keywords" content="")
+    meta(name="author" content="Site Author")
+    link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+    //Stylesheets
+    link(rel="stylesheet" href="css/style.css" media="screen")
+    link(rel="stylesheet" href="css/media-queries.css" media="screen")
+    //Fancybox styles
+    link(rel="stylesheet" href="css/fancybox.min.css" media="screen")
+    //Revolution Slider styles
+    link(rel="stylesheet" href="js/rs-plugin/css/settings.css" media="screen")
+    //Google fonts
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800")
+    //JavaScripts
+    script(src="js/jquery.min.js")
+    <!-- Add HTML5 support for older IE browsers -->
+    <!--[if lt IE 9]><html><script src="js/html5.min.js"></script><script src="js/selectivizr-and-extra-selectors.min.js"></script><![endif]-->
+    script(src="js/modernizr.custom.js")
+    //sound manager
+    script(src="js/soundmanager/soundmanager2-nodebug-jsmin.js")
+    script(src="js/soundmanager/jquery.playable.js")
+    script(src="js/soundmanager/jquery.playable.ui.simple.js")
+    script(src="js/respond.min.js")
+    script(src="js/jquery.fitvids.js")
+    //Sliders
+    //jQuery Nivo slider
+    script(src="js/jquery.nivo.slider.pack.js")
+    //jQuery Revolution Slider
+    script(type="text/javascript" src="js/rs-plugin/js/jquery.themepunch.plugins.min.js")
+    script(type="text/javascript" src="js/rs-plugin/js/jquery.themepunch.revolution.min.js")
+    script(src="js/jquery.countdown.js")
+    script(src="js/jquery.easing-1.3.min.js")
+    script(src="js/jquery.isotope.min.js")
+    script(src="js/jquery.touchSwipe-1.2.5.min.js")
+    script(src="js/jquery.sharrre-1.3.2.min.js")
+    script(src="//maps.google.com/maps/api/js?sensor=false")
+    script(src="js/jquery.gmap.min.js")
+    //Fancybox
+    script(src="js/jquery.fancybox-1.3.4.pack.js")
+    //custom scripts
+    script(src="js/custom.js")
+  body(class="page-blog")
+    <!--[if lte IE 7]><div id="ie-message"><p>You are using Internet Explorer 7.0 or older to view this site. Your browser is an eight year old browser which does not display modern web sites properly. Please upgrade to a newer browser to fully enjoy the web. <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Upgrade your browser</a></p></div><![endif]-->
+    //page header
+    section(id="page-header")
+      div(class="container clearfix")
+        hgroup
+          h1(class="page-title") Blog
+          h2(class="page-subtitle") Latest Eprom news.
+        //share it
+        div(id="share-wrap")
+          div(id="share" data-url="blog.html" data-text="Blog" data-title="share")
+      hr
+    section(id="main-content" class="container clearfix")
+      //main
+      section(id="main" class="clearfix")
+        article(class="entry")
+          h2(class="entry-heading")
+            a(href="blog-single.html") Post with slider.
+          //nivo slider
+          div(class="nivo-slider")
+            a(href="/artists.html")
+              img(src="placeholders/blog-02.jpg" alt="" title="")
+            a(href="/artists.html")
+              img(src="placeholders/blog-01.jpg" alt="" title="")
+            a(href="/artists.html")
+              img(src="placeholders/blog-03.jpg" alt="" title="")
+          p Phasellus ligula sem, laoreet luctus luctus sed, pharetra in mi. Aenean accumsan gravida convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus congue tellus lectus, quis sodales sem. Ut nec nisl id sem ultricies malesuada. Nunc eu justo mauris, non lobortis dolor. Nunc id condimentum leo.
+          ul(class="entry-meta none")
+            li(class="entry-date") 22/12/2012
+            li(classs="entry-comments") Comments 12
+            li(class="entry-more")
+              a(href="blog-single.html") Read more
+        article(class="entry")
+          h2(class="entry-heading")
+            a(href="blog-single.html") Aliquam ullamcorper eleifend neque.
+          img(src="placeholders/blog-01.jpg" alt="" class="aligncenter")
+          p Phasellus ligula sem, laoreet luctus luctus sed, pharetra in mi. Aenean accumsan gravida convallis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus congue tellus lectus, quis sodales sem. Ut nec nisl id sem ultricies malesuada. Nunc eu justo mauris, non lobortis dolor. Nunc id condimentum leo.
+          ul(class="entry-meta none")
+            li(class="entry-date") 22/12/2012
+            li(classs="entry-comments") Comments 12
+            li(class="entry-more")
+              a(href="blog-single.html") Read more
+        //pagination
+        ul(id="pagination" class="none")
+          li
+            a(href="#" class="nav-prev")
+          li
+            a(href="#") 1
+          li
+            a(href="#") 2
+          li
+            span(class="active") 3
+          li
+            a(href="#") 4
+          li
+            a(href="#") 5
+          li
+            a(href="#" class="nav-next")
+        div(class="clear")
+      //sidebar
+      aside(id="sidebar")
+        //Search widget
+        div(class="widget widget_search")
+          h3(class="widget-title") Search.
+          //form
+          form(method="get" id="searchform" action="#")
+            input(type="text" class="input-search" value="" name="s" id="s")
+            input(type="submit" class="search-button" id="submit-search" value="Search")
+        //Categories widget
+        div(class="widget")
+          h3(class="widget-title") Categories.
+          ul(class="categories")
+            li
+              a(href="#") Drum and bass
+                span
+            li
+              a(href="#") Electro breaks
+                span
+            li
+              a(href="#") Breakbeat
+                span
+            li
+              a(href="#") Nu-skool breaks
+                span
+        //Video widget
+        div(class="widget")
+          h3(class="widget-title") Video widget.
+          //video
+          div(class="video")
+            iframe(src="http://player.vimeo.com/video/20774732?color=fa4c29&amp;title=0&amp;byline=0&amp;portrait=0" width="288" height="162" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen)
+        //Twitter feed widget
+        div(class="widget")
+          h3(class="widget-title") Twitter feed.
+          //twitter feed
+          //ul(class="tweets" data-tweets-count="4")
+            //<li>Oops, our Twitter feed is unavailable at the moment - <a href="#">Follow us on Twitter!</a></li>
+        //Flickr widget
+        div(class="widget")
+          h3(class="widget-title") Flickr widget.
+          script(type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=random&amp;size=s&amp;layout=x&amp;source=user_set&amp;set=72157630861485102")
+        //Text widget
+        div(class="widget")
+          h3(class="widget-title") Text widget.
+          p Phasellus ligula sem, laoreet luctus luctus sed, pharetra in mi. Aenean accumsan gravida convallis.
+    //footer-top
+    section(id="footer-top")
+      div(class="container clearfix")
+        div(class="col-2-3")
+          ul(class="contact")
+            li(class="address") Melbourne, AU, VIC 3000.
+            li(class="phone") (123) 563-9899-234
+            li(class="email")
+              a(href="mailto:contact@companyname.com") contact@eprom.com
+        div(class="col-1-3 last")
+          //social icons
+          div(class="social-icons")
+            a(href="#" class="social-icon twitter")
+            a(href="#" class="social-icon facebook")
+            a(href="#" class="social-icon lastfm")
+            a(href="#" class="social-icon soundcloud")
+            a(href="#" class="social-icon myspace")
+            a(href="#" class="social-icon youtube")
+    //footer
+    footer(id="footer" class="clearfix")
+      section(class="container clearfix")
+        div(class="col-1-2")
+          //footer-nav
+          nav(id="footer-nav" class="clearfix")
+            ul
+              li
+                a(href="#") Home
+              li
+                a(href="#") Team
+              li
+                a(href="#") Releases
+              li
+                a(href="#") Contact
+          div(class="copyright")
+            img(src="img/footer-logo.png" alt="")
+            span= "Creada por AnHellLycan."
+        div(class="col-1-2 last")
+          //footer twitter
+          div(id="footer-twitter")
+            //twitter feed
+            //ul(class="tweets")
+              li Oops, our Twitter feed is unavailable at the moment -
+                a(href="#") Follow us on Twitter!
+        //twitter icon
+        a(href="#" class="twitter-button")

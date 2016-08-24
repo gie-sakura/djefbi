@@ -12,3 +12,9 @@ router.get('/eventos', function (req, res, next) {
     title: 'Eventos'
   });
 });
+
+router.get('/evento', function (req, res, next) {
+  res.render('evento', {
+    title: 'Eventos'
+  });
+});

@@ -8,7 +8,11 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
+  Article.find(function (err, articles) {
+    if (err) return next(err);
     res.render('indexj', {
-      title: 'DjEfBi'
+      title: 'DjeFBi',
+      articles: articles
     });
+  });
 });

@@ -9,8 +9,10 @@ var config = {
       name: 'pagefbi2'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/pagefbi2-development'
+    db: 'mongodb://heroku_z7dxc7qj:astkufft25bj4vvgge30q0pkmc@ds017736.mlab.com:17736/heroku_z7dxc7qj'
   },
+
+
 
   test: {
     root: rootPath,
@@ -18,7 +20,7 @@ var config = {
       name: 'pagefbi2'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/pagefbi2-test'
+    db: 'mongodb://heroku_z7dxc7qj:astkufft25bj4vvgge30q0pkmc@ds017736.mlab.com:17736/heroku_z7dxc7qj'
   },
 
   production: {
@@ -27,7 +29,7 @@ var config = {
       name: 'pagefbi2'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/pagefbi2-production'
+    db: 'mongodb://heroku_z7dxc7qj:astkufft25bj4vvgge30q0pkmc@ds017736.mlab.com:17736/heroku_z7dxc7qj'
   }
 };
 
